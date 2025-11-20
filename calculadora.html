@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Pagina simples para realizar calculos matemáticos"> 
+  <meta name="keywords" content="HTML, site, calculadora, online"> 
+  <meta name="author" content="Figueiredo Domingos"> 
+  <title>Calculadora Simples</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .calculadora {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .display {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 24px;
+            text-align: right;
+            background-color: #f0f0f0;
+        }
+
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        .botao {
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #3e8e41;
+        }
+
+        .botao.igual {
+            background-color: #2196F3;
+        }
+
+        .botao.igual:hover {
+            background-color: #1976D2;
+        }
+        a{
+        margin-left:10%;
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="calculadora">
+        <input type="text" class="display" id="display" disabled>
+        <div class="botoes">
+            <button class="botao" onclick="limpar()">C</button>
+            <button class="botao" onclick="deletar()">DEL</button>
+            <button class="botao" onclick="inserir('%')">%</button>
+            <button class="botao" onclick="inserir('/')">/</button>
+            <button class="botao" onclick="inserir('7')">7</button>
+            <button class="botao" onclick="inserir('8')">8</button>
+            <button class="botao" onclick="inserir('9')">9</button>
+            <button class="botao" onclick="inserir('*')">*</button>
+            <button class="botao" onclick="inserir('4')">4</button>
+            <button class="botao" onclick="inserir('5')">5</button>
+            <button class="botao" onclick="inserir('6')">6</button>
+            <button class="botao" onclick="inserir('-')">-</button>
+            <button class="botao" onclick="inserir('1')">1</button>
+            <button class="botao" onclick="inserir('2')">2</button>
+            <button class="botao" onclick="inserir('3')">3</button>
+            <button class="botao" onclick="inserir('+')">+</button>
+            <button class="botao igual" onclick="calcular()">=</button>
+            <button class="botao" onclick="inserir('0')">0</button>
+            <button class="botao" onclick="inserir('.')">.</button>
+        </div>
+    </div>
+<p style="text-align:center" ><strong>Figueiredo Domingos</strong></p>
+<a href="https://wa.me/244958594933?text=Olá%20estou%20interessado" target="_blank">
+  Fale comigo no WhatsApp
+</a>
+    
+    <script>
+        function inserir(valor) {
+            document.getElementById("display").value += valor;
+        }
+
+        function limpar() {
+            document.getElementById("display").value = "";
+        }
+
+        function deletar() {
+            let display = document.getElementById("display").value;
+            document.getElementById("display").value = display.slice(0, -1);
+        }
+
+        function calcular() {
+            let display = document.getElementById("display").value;
+            try {
+                let resultado = eval(display);
+                document.getElementById("display").value = resultado;
+            } catch (e) {
+                document.getElementById("display").value = "Erro";
+            }
+        }
+    </script>
+    
+</body>
+</html>
